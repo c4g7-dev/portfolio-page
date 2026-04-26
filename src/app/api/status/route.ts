@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export const revalidate = 60;
 
 const BASE = process.env.NEXT_PUBLIC_STATUS_BASE ?? "https://status.c4g7.com";
-const SLUG = process.env.STATUS_SLUG ?? "default";
+const SLUG = process.env.STATUS_SLUG ?? "host";
 
 type Heartbeat = { status: 0 | 1 | 2 | 3; time: string; msg?: string; ping?: number };
 type HeartbeatResponse = {
