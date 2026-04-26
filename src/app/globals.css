@@ -283,6 +283,109 @@
   animation: shimmer-sweep 1.8s ease-in-out infinite;
 }
 
+/* Button: sheen sweep on hover */
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 70%
+  );
+  transform: translateX(-110%);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+.btn-sheen:hover::before {
+  transform: translateX(110%);
+}
+.btn-sheen > * {
+  position: relative;
+  z-index: 2;
+}
+.btn-sheen:active {
+  transform: scale(0.97);
+}
+
+/* Stack chip: animated indicator dot + lift */
+@keyframes chip-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 0.375rem 0.75rem 0.375rem 0.625rem;
+  font-family: var(--font-geist-mono);
+  font-size: 0.75rem;
+  color: oklch(0.78 0 0);
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+  overflow: hidden;
+}
+.chip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--chip-color, oklch(0.85 0 0));
+  box-shadow: 0 0 8px var(--chip-color, oklch(0.85 0 0));
+  animation: chip-pulse 2.4s ease-in-out infinite;
+  animation-delay: var(--chip-delay, 0s);
+  flex-shrink: 0;
+}
+.chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    180px circle at var(--chip-mx, -200%) 50%,
+    color-mix(in oklch, var(--chip-color) 25%, transparent),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklch, var(--chip-color) 50%, transparent);
+  color: oklch(0.98 0 0);
+  box-shadow:
+    0 6px 24px -10px color-mix(in oklch, var(--chip-color) 50%, transparent),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+.chip:hover::after {
+  opacity: 1;
+}
+
 /* Subtle scan-line on hover */
 .scanline {
   background: repeating-linear-gradient(

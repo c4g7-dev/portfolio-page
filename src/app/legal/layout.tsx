@@ -34,8 +34,13 @@ export default function LegalLayout({
         </Link>
 
         <header className="stagger mt-6">
-          <h1 className="text-4xl font-semibold tracking-tighter sm:text-5xl">
-            <span className="font-serif italic font-light text-neutral-400">/</span>
+          <h1 className="flex items-baseline text-4xl font-semibold tracking-tighter sm:text-5xl">
+            <span
+              aria-hidden
+              className="mr-1 font-mono text-3xl font-medium text-neutral-500 sm:text-4xl"
+            >
+              /
+            </span>
             <span className="shimmer-text">legal</span>
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">

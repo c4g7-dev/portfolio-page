@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FlagDE } from "@/components/icons/flag-de";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -11,7 +12,9 @@ export function SiteFooter() {
         <div className="flex items-center gap-2 font-mono">
           <span>© {year} c4g7</span>
           <span className="text-neutral-700">/</span>
-          <span>made with care in 🇩🇪</span>
+          <span className="inline-flex items-center gap-1.5">
+            made with care in <FlagDE />
+          </span>
         </div>
         <div className="flex items-center gap-4 font-mono">
           <Link
