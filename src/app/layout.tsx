@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { KonamiRain } from "@/components/konami-rain";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} font-sans`}
       >
         {children}
+        <KonamiRain />
       </body>
     </html>
   );

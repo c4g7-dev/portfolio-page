@@ -15,19 +15,19 @@ export function SiteFooter() {
         </div>
         <div className="flex items-center gap-4 font-mono">
           <Link
-            href="https://c4g7.com/pages/terms"
+            href="/legal/terms"
             className="transition hover:text-foreground"
           >
             terms
           </Link>
           <Link
-            href="https://c4g7.com/pages/privacy"
+            href="/legal/privacy"
             className="transition hover:text-foreground"
           >
             privacy
           </Link>
           <Link
-            href="https://c4g7.com/pages/imprint"
+            href="/legal/imprint"
             className="transition hover:text-foreground"
           >
             imprint

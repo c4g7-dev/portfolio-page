@@ -11,6 +11,7 @@ import {
   Sparkles,
   User,
   Clock,
+  Scale,
 } from "lucide-react";
 import { GithubIcon } from "@/components/icons/github";
 import {
@@ -74,6 +75,9 @@ export function CommandPalette() {
           </CommandItem>
           <CommandItem onSelect={() => go("#contact")}>
             <Mail /> Contact
+          </CommandItem>
+          <CommandItem onSelect={() => go("/legal/terms")}>
+            <Scale /> Legal
           </CommandItem>
         </CommandGroup>
 

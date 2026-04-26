@@ -89,7 +89,8 @@ export function GithubRepos() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="h-44 rounded-xl border border-white/10 bg-white/[0.02] animate-pulse"
+            className="skeleton h-44 rounded-xl border border-white/10"
+            style={{ animationDelay: `${i * 80}ms` }}
           />
         ))}
       </div>
