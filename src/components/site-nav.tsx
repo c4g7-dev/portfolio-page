@@ -14,9 +14,20 @@ export function SiteNav() {
     <header className="relative z-10 mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 pt-6 sm:pt-8">
       <Link
         href="/"
-        className="flex items-center gap-2 font-mono text-sm tracking-tight text-neutral-300 transition hover:text-foreground"
+        className="group flex items-center gap-2.5 font-mono text-sm tracking-tight text-neutral-300 transition hover:text-foreground"
       >
-        <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse-dot shadow-[0_0_12px_rgba(52,211,153,0.7)]" />
+        <span className="relative inline-flex">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://c4g7.com/assets/img/1_1734656387.png"
+            alt="c4g7 avatar"
+            width={28}
+            height={28}
+            className="size-7 rounded-full border border-white/10 object-cover shadow-[0_0_0_2px_rgba(0,0,0,0.4)] transition group-hover:border-white/25"
+            loading="eager"
+          />
+          <span className="absolute -bottom-0.5 -right-0.5 inline-block h-2 w-2 rounded-full bg-emerald-400 ring-2 ring-background animate-pulse-dot shadow-[0_0_10px_rgba(52,211,153,0.7)]" />
+        </span>
         c4g7
       </Link>
       <div className="flex items-center gap-2">
