@@ -19,7 +19,7 @@ export function SiteNav() {
         <span className="relative inline-flex">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://c4g7.com/assets/img/1_1734656387.png"
+            src="/avatar.png"
             alt="c4g7 avatar"
             width={28}
             height={28}

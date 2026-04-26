@@ -30,17 +30,17 @@ export const metadata: Metadata = {
     description: "Developer & server specialist from Germany.",
     url: "https://c4g7.com",
     siteName: "c4g7",
-    images: ["https://c4g7.com/assets/img/1_1734656387.png"],
+    images: ["/avatar.png"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "c4g7 — Arne",
     description: "Developer & server specialist from Germany.",
-    images: ["https://c4g7.com/assets/img/1_1734656387.png"],
+    images: ["/avatar.png"],
   },
   icons: {
-    icon: "https://c4g7.com/assets/img/1_1734656387.png",
+    icon: "/avatar.png",
   },
 };
 
