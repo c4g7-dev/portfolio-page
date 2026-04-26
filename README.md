@@ -2,6 +2,8 @@
 
 A dark, minimal Next.js 16 + Tailwind v4 + shadcn-style profile page.
 
+![preview](.github/assets/preview.png)
+
 ## Features
 
 - Dark-only design with subtle violet/cyan radial glows + grid
