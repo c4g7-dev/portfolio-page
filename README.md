@@ -24,6 +24,24 @@ npm run build
 npm start
 ```
 
+## Deploy to Cloudflare Workers
+
+Uses [@opennextjs/cloudflare](https://opennext.js.org/cloudflare). Configured via
+[`wrangler.jsonc`](./wrangler.jsonc) and [`open-next.config.ts`](./open-next.config.ts).
+
+```bash
+npm run cf:preview          # local Workers preview
+npm run cf:deploy           # build + deploy with wrangler
+```
+
+When deploying via the Cloudflare dashboard / CI, set:
+
+- **Build command:** `npm run cf:build`
+- **Deploy command:** `npx opennextjs-cloudflare deploy`
+- **Environment variables:** `RESEND_API_KEY`, `CONTACT_TO`,
+  `NEXT_PUBLIC_STATUS_BASE`, `STATUS_SLUG`, `GITHUB_USER`
+- The compatibility flag `nodejs_compat` must be enabled (already in `wrangler.jsonc`).
+
 ## Configuration
 
 Copy `.env.example` to `.env.local` and adjust:

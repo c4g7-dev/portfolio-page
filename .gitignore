@@ -42,3 +42,7 @@ next-env.d.ts
 
 # Local legacy backup
 _legacy-index.html.bak
+
+# OpenNext / Cloudflare
+.open-next/
+.wrangler/
