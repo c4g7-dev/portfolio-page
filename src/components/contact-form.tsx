@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +12,10 @@ export function ContactForm() {
     "idle"
   );
   const [error, setError] = useState<string | null>(null);
+  // `e.currentTarget` is nulled once the handler yields at the first await, so
+  // reading it after the fetch threw and the catch reported a failed send even
+  // though the mail had gone out. Hold the node in a ref instead.
+  const formRef = useRef<HTMLFormElement>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -32,8 +36,8 @@ export function ContactForm() {
       });
       const data: { ok: boolean; error?: string } = await res.json();
       if (!data.ok) throw new Error(data.error ?? "Failed");
+      formRef.current?.reset();
       setState("sent");
-      e.currentTarget.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed");
       setState("error");
@@ -65,6 +69,7 @@ export function ContactForm() {
 
   return (
     <form
+      ref={formRef}
       onSubmit={onSubmit}
       className="card-glow rounded-xl border border-white/10 p-6"
     >
