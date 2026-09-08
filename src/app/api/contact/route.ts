@@ -75,8 +75,10 @@ export async function POST(req: Request) {
       console.log("[contact] (dev, no RESEND_API_KEY) →", { name, email, message });
       return NextResponse.json({ ok: true, dev: true });
     }
+    // Visitor-facing: "not configured" tells them nothing and leaves them
+    // with no way to reach anyone. Point at the mailbox instead.
     return NextResponse.json(
-      { ok: false, error: "Contact is not configured." },
+      { ok: false, error: `The form isn't available right now. Please email ${to} directly.` },
       { status: 503 }
     );
   }
@@ -99,14 +101,14 @@ export async function POST(req: Request) {
     });
     if (error) {
       return NextResponse.json(
-        { ok: false, error: "Failed to send. Please email me directly." },
+        { ok: false, error: `Couldn't send. Please email ${to} directly.` },
         { status: 502 }
       );
     }
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "Failed to send. Please email me directly." },
+      { ok: false, error: `Couldn't send. Please email ${to} directly.` },
       { status: 500 }
     );
   }
