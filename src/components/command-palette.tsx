@@ -9,7 +9,6 @@ import {
   Mail,
   Server,
   Sparkles,
-  User,
   Clock,
   Scale,
 } from "lucide-react";
@@ -89,9 +88,6 @@ export function CommandPalette() {
           </CommandItem>
           <CommandItem onSelect={() => go("https://status.c4g7.com", true)}>
             <Activity /> Status Page
-          </CommandItem>
-          <CommandItem onSelect={() => go("https://bio.c4g7.com", true)}>
-            <User /> Bio
           </CommandItem>
           <CommandItem onSelect={() => go("https://github.com/c4g7-dev", true)}>
             <GithubIcon /> GitHub

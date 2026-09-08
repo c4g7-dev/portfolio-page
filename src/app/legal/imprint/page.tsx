@@ -3,18 +3,26 @@ import { LegalDoc } from "@/components/legal-doc";
 
 export const metadata: Metadata = {
   title: "Imprint — c4g7",
-  description: "Imprint per § 5 TMG.",
+  description: "Imprint per § 5 DDG.",
 };
 
 export default function ImprintPage() {
   return (
-    <LegalDoc title="Imprint" updated="April 26, 2026">
+    <LegalDoc title="Imprint" updated="September 7, 2026">
       <section>
-        <h3>Information per § 5 TMG</h3>
+        <h3>Information per § 5 DDG</h3>
         <p>
-          c4g7 (private individual)
+          Arne Heidrich
+          <br />
+          Neuer Weg 1
+          <br />
+          09437 Börnichen
           <br />
           Germany
+        </p>
+        <p>
+          Private individual. Not registered in the commercial register, no VAT
+          identification number per § 27 a UStG.
         </p>
       </section>
 
@@ -28,35 +36,35 @@ export default function ImprintPage() {
       </section>
 
       <section>
-        <h3>Responsible for content per § 55 (2) RStV</h3>
-        <p>c4g7 — address available on request.</p>
+        <h3>Responsible for content per § 18 (2) MStV</h3>
+        <p>
+          Arne Heidrich, Neuer Weg 1, 09437 Börnichen, Germany.
+        </p>
       </section>
 
       <section>
-        <h3>EU dispute resolution</h3>
+        <h3>Consumer dispute resolution</h3>
         <p>
-          The European Commission provides a platform for online dispute
-          resolution (ODR):{" "}
-          <a
-            href="https://ec.europa.eu/consumers/odr/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            ec.europa.eu/consumers/odr
-          </a>
-          . I&apos;m not obliged and not willing to participate in dispute
-          resolution proceedings before a consumer arbitration board.
+          I&apos;m neither obliged nor willing to participate in dispute
+          resolution proceedings before a consumer arbitration board
+          (Verbraucherschlichtungsstelle).
+        </p>
+        <p>
+          The European Commission&apos;s Online Dispute Resolution platform was
+          shut down on 20 July 2025 under Regulation (EU) 2024/3228, so no link
+          to it is given here.
         </p>
       </section>
 
       <section>
         <h3>Liability for content</h3>
         <p>
-          As a service provider I&apos;m responsible for my own content on
-          these pages according to § 7 (1) TMG and general law. According to
-          §§ 8–10 TMG I&apos;m, however, not under obligation to monitor
-          transmitted or stored third-party information, or to investigate
-          circumstances pointing to illegal activity.
+          As a service provider I&apos;m responsible for my own content on these
+          pages according to § 7 (1) DDG and general law. According to §§ 8–10
+          DDG and Art. 4–6 of Regulation (EU) 2022/2065 (Digital Services Act)
+          I&apos;m, however, not under obligation to monitor transmitted or
+          stored third-party information, or to investigate circumstances
+          pointing to illegal activity.
         </p>
       </section>
 
@@ -66,19 +74,18 @@ export default function ImprintPage() {
           This site contains links to external websites of third parties, on
           whose contents I have no influence. Therefore I cannot assume any
           liability for these external contents. The respective provider or
-          operator of the linked pages is always responsible for the contents
-          of those pages.
+          operator of the linked pages is always responsible for the contents of
+          those pages.
         </p>
       </section>
 
       <section>
         <h3>Copyright</h3>
         <p>
-          The contents and works on these pages created by the site operator
-          are subject to German copyright law. Duplication, processing,
-          distribution and any kind of exploitation outside the limits of
-          copyright require the written consent of the respective author or
-          creator.
+          The contents and works on these pages created by the site operator are
+          subject to German copyright law. Duplication, processing, distribution
+          and any kind of exploitation outside the limits of copyright require
+          the written consent of the respective author or creator.
         </p>
       </section>
     </LegalDoc>

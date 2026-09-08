@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalDoc title="Terms of Service" updated="April 26, 2026">
+    <LegalDoc title="Terms of Service" updated="September 7, 2026">
       <section>
         <h3>1. Agreement</h3>
         <p>
@@ -61,9 +61,9 @@ export default function TermsPage() {
       <section>
         <h3>6. Third-party services</h3>
         <p>
-          The Site relies on third-party providers (e.g. Vercel for hosting,
-          Resend for email, GitHub for code metadata). Their respective terms
-          apply alongside these.
+          The Site relies on third-party providers (Cloudflare for hosting and
+          edge delivery, Resend for email delivery, GitHub for public repository
+          metadata). Their respective terms apply alongside these.
         </p>
       </section>
 

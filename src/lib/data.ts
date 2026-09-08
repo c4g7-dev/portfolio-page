@@ -2,7 +2,6 @@ import type * as React from "react";
 import {
   Server,
   Activity,
-  User,
   Mail,
   ExternalLink,
   Boxes,
@@ -24,13 +23,6 @@ export type LinkItem = {
 };
 
 export const LINKS: LinkItem[] = [
-  {
-    title: "Bio",
-    description: "A small page with a bit more about me.",
-    href: "https://bio.c4g7.com",
-    domain: "bio.c4g7.com",
-    icon: User,
-  },
   {
     title: "Hosting",
     description: "My server & game-host control panel.",
@@ -95,15 +87,6 @@ export const PROJECTS: Project[] = [
       "Distributed Uptime monitoring across 5 EU & US locations watching over hosts, databases, edge proxies and more.",
     href: "https://status.c4g7.com",
     tags: ["Uptime Kuma", "Monitoring", "Multi-region"],
-    status: "live",
-  },
-  {
-    name: "c4g7.bio",
-    tagline: "Personal bio page",
-    description:
-      "The legacy bio site — a quick window into who I am, what I do, and where to find me.",
-    href: "https://bio.c4g7.com",
-    tags: ["Web", "Personal"],
     status: "live",
   },
   {
