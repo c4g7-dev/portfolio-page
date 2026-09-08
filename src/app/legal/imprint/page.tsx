@@ -20,10 +20,6 @@ export default function ImprintPage() {
           <br />
           Germany
         </p>
-        <p>
-          Private individual. Not registered in the commercial register, no VAT
-          identification number per § 27 a UStG.
-        </p>
       </section>
 
       <section>
